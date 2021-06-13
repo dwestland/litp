@@ -1,0 +1,23 @@
+{
+  "name": "LivingInThePalisades.com",
+  "version": "0.9.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "cssnano": "^5.0.6",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-svgmin": "^3.0.0",
+    "gulp-terser": "^2.0.1",
+    "postcss": "^8.3.1"
+  }
+}

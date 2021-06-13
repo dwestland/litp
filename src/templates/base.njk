@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page_title }}</title>
+    <meta name="description" content="{{ page_description }}">
+    <link rel="stylesheet" href="/main.css">
+    {{ append_head | safe }}
+  </head>
+  <body>
+
+    {% include "menu.njk" %}
+
+    {% include "nav.njk" %}
+
+    {% block content %}{% endblock %}
+
+    {% include "footer.njk" %}
+
+    <script src="/main.js"></script>
+  </body>
+</html>

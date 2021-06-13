@@ -1,0 +1,12 @@
+{% extends "base.njk" %}
+{% set page_title = 'My title' %}
+{% set page_description = 'My description' %}
+{% set append_head = '<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">' %}
+
+{% extends "base.njk" %}
+
+{% block content %}
+  <p>I am content from root index.html</p>
+  <img src="/images/old-computer.jpg" width="300px" alt="Old Computer">
+{% endblock %}
