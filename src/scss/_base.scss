@@ -1,4 +1,127 @@
+$text-color: #2e2e2e;
+
+$blue: #4285F4;
+$red: #DB4437;
+$yellow: #F4B400;;
+$green: #0F9D58;;
+
+$dark-blue: #285092;
+$dark-red: #8C2820;
+$dark-yellow: #7E5E03;
+$dark-green: #1A542A;
+
+$light-blue: #ccdfff;
+$light-red: #ffd6d2;
+$light-yellow: #ffecb4;
+$light-green: #c4e6cd;
+
+$light-gray: #aaaaaa;
+$lighter-gray: #e2e2e2;
+
 body {
-  background: lightblue;
-  color: darkblue;
+  // font-size: 16px;
+}
+
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  list-style: none;
+  list-style-type: none;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  overflow-x: hidden;
+  color: #121212;
+  background: #fafafa;
+}
+
+a,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  a,
+  button {
+    cursor: default !important;
+    border: none;
+    outline: none;
+  }
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container {
+  // max-width: 80rem;
+  width: 100%;
+  height: auto;
+  // padding: 0 2rem;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 992px) {
+  .container {
+    padding: 0 1rem;
+    margin: 0 auto;
+  }
+}
+
+.brand {
+  font-family: inherit;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: inherit;
+  color: $dark-blue;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+}
+
+.hero {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("/images/pacific-palisades-coast-large.jpg");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+.idx-search-wrapper {
+  margin-top: 40px;
+  text-align: center;
 }

@@ -1,0 +1,267 @@
+
+hr {
+  margin: 20px 40px;
+}
+
+// Adriane block
+.adriane-block {
+  display: grid;
+  grid-template-columns: 50px 180px 80px;
+  grid-template-rows: 20px 25px 35px;
+
+  .title {
+    font-size: 22px;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    text-align: center;
+    span {
+      font-size: 1rem;
+    }
+  }
+
+  .photo {
+    grid-column: 3 / 4;
+    grid-row: 1 / 4;
+    height: 80px;
+    width: 80px;
+  }
+
+  .logo {
+    font-size: 60px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    height: 45px;
+    width: 55px;
+  }
+
+  .name {
+    color: $red;
+    font-size: 20px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    margin-top: 6px;
+    text-align: center;
+  }
+
+  .phone {
+    font-size: 24px;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    margin-top: 8px;
+    text-align: center;
+  }
+}
+
+footer {
+  margin-bottom: 60px;
+}
+// Realestate footer
+.realestate-footer-menu {
+  margin: 0;
+  padding: 0 20px;
+  text-align: center;
+
+  ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    padding: 10px 20px;
+  }
+
+  li a {
+    text-decoration: none;
+  }
+
+  li a:hover {
+    text-decoration: underline;
+  }
+}
+
+.realestate-footer {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -10px;
+  padding: 0 20px;
+  width: 100%;
+
+  > div {
+    display: inline-block;
+    margin: auto;
+    min-width: 340px;
+    width: 33%;
+  }
+
+  p {
+      line-height: 1.2;
+      margin: 0;
+  }
+
+  .mls-info {
+    font-size: 10px;
+
+    img {
+      float: left;
+      height: 90px;
+      margin-right: 10px;
+      width: 170px;
+    }
+  }
+
+  .adriane-info {
+    text-align: center;
+
+    .contact-info {
+      p {
+        line-height: 1.6;
+      }
+    }
+  }
+
+  .adriane-block-footer {
+    order: 1;
+
+    .title {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .mls-info {
+      order: 3;
+    }
+  
+    .adriane-info {
+      padding: 20px 0;
+      order: 2;
+    }
+  
+    .adriane-block-footer  {
+      order: 1;
+    } 
+  }
+}
+
+// Display listings in an aside on template.php
+aside.realestate-root {
+  .area-wrapper {
+    display: block;
+  }
+
+  .listing-card {
+    .see-all-listings {
+      display: block;
+      text-align: center;
+      p {
+        font-size: 14px;
+        margin: 0;
+      }
+    }
+
+    h3 {
+      font-size: 32px;
+      line-height: 1;
+      margin-top: 10px;
+    }
+  }
+
+  .aside-header {
+
+    p {
+      line-height: 1.5;
+      margin: 0;
+      margin: 5px 0;
+      text-align: center;
+    }
+
+    .hotlist{
+      display: block;
+      margin: auto;
+      width: 100px;
+    }
+  }
+}
+
+// Adriane ad
+.adriane-ad-wrapper {
+  border: 1px solid $dark-blue;
+  margin-bottom: 20px;
+  margin: auto;
+
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    color: $text-color;
+    line-height: 1.2;
+    margin: 5px;
+    text-align: center;
+  }
+
+  .tiny-text {
+    font-size: 11px;
+    margin-bottom: 2px;
+  }
+
+  .adriane-ad {
+    display: grid;
+    grid-template-columns: 190px 80px;
+    grid-template-rows: 35px 40px 40px;
+
+    .title {
+      color: $text-color;
+      font-size: 24px;
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+      margin-top: 4px;
+      text-align: center;
+    }
+
+    .photo {
+      grid-column: 2 / 3;
+      grid-row: 2 / 4;
+      height: 80px;
+      width: 80px;
+    }
+
+    .name {
+      color: $red;
+      font-size: 22px;
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      margin-top: 14px;
+      text-align: center;
+    }
+
+    .phone {
+      color: $text-color;
+      font-size: 24px;
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+      margin-top: 8px;
+      text-align: center;
+    }
+  }
+  .blue-text {
+    color: $dark-blue;
+  }
+}
+
+@media (max-width: 800px) {
+  .adriane-ad-wrapper  {
+    display: table;
+  }
+}
+
+.home-search {
+  margin-bottom: 3px;
+  margin-top: -5px;
+  text-align: center;
+}

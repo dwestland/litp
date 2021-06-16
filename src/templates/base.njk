@@ -7,15 +7,18 @@
     <title>{{ page_title }}</title>
     <meta name="description" content="{{ page_description }}">
     <link rel="stylesheet" href="/main.css">
+
+    Do I need these ??
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.6.3/css/ionicons.min.css">
+
     {{ append_head | safe }}
   </head>
   <body>
 
     {% include "menu.njk" %}
 
-    {% include "nav.njk" %}
-
-    {% block content %}{% endblock %}
+    {% block content %}
+    {% endblock %}
 
     {% include "footer.njk" %}
 
