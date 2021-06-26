@@ -51,31 +51,42 @@
 }
 
 .header {
-  position: fixed;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  padding: 1rem 0;
-  margin: 0 auto;
-  z-index: 999;
-  border: none;
-  outline: none;
   background: #fafafa;
-  -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  display: block;
+  height: auto;
+  left: 0;
+  margin: 0 auto;
+  outline: none;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  ul {
+    list-style-type: none;
+    // margin: 0;
+    // padding: 0;
+  }
+
 }
 
 .header .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  //     -ms-flex-align: center;
+  // -ms-flex-wrap: wrap;
+  // -webkit-box-align: center;
+  // display: -ms-flexbox;
+  // display: -webkit-box;
+  align-items: center;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
 }
 
 .header-item-left {

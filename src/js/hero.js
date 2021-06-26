@@ -1,11 +1,11 @@
-"use strict";
+// "use strict";
 
 /*
   since querySelectorAll gives us the total number
   of items of the class "controls"
   console.log(controls.length) result(3)
 */
-const controls = document.querySelectorAll('.controls');
+// const controls = document.querySelectorAll('.controls');
 
 
 let slides = document.querySelectorAll('#all_slides .slide');
@@ -15,9 +15,9 @@ const nextSlide = () => {
     goToSlide(currentSlide + 1);
 }
 
-const previousSlide = () => {
-    goToSlide(currentSlide - 1);
-}
+// const previousSlide = () => {
+//     goToSlide(currentSlide - 1);
+// }
 
 /*
   this does the magic of moving to the next slide after
@@ -74,50 +74,50 @@ const goToSlide = (s) => {
 }
 
 
-let playing = true;
-let pauseButton = document.querySelector("#pause");
+// let playing = true;
+// let pauseButton = document.querySelector("#pause");
 
-const pauseSlideshow = () => {
-    // when slideshow is paused show the play icon
-    pauseButton.innerHTML = '<i class="fas fa-play-circle"></i>';
-    // when pause we set an interim variable to indicate not playing 
-    playing = false;
-    // stop the sideshow on pause
-    clearInterval(slideInterval);
-}
+// const pauseSlideshow = () => {
+//     // when slideshow is paused show the play icon
+//     pauseButton.innerHTML = '<i class="fas fa-play-circle"></i>';
+//     // when pause we set an interim variable to indicate not playing 
+//     playing = false;
+//     // stop the sideshow on pause
+//     clearInterval(slideInterval);
+// }
 
-const playSlideshow = () => {
-    // while playing show the pause icon
-    pauseButton.innerHTML = '<i class="fas fa-pause-circle"></i>'; 
-    // when playing we set an interim variable to indicate playing 
-    playing = true;
-    // start a slideshow on play
-    slideInterval = setInterval(nextSlide, 2100);
-}
+// const playSlideshow = () => {
+//     // while playing show the pause icon
+//     pauseButton.innerHTML = '<i class="fas fa-pause-circle"></i>'; 
+//     // when playing we set an interim variable to indicate playing 
+//     playing = true;
+//     // start a slideshow on play
+//     slideInterval = setInterval(nextSlide, 00);
+// }
 
-pauseButton.onclick = () => {
-    if(playing){ pauseSlideshow(); }
-    else{ playSlideshow(); }
-};
+// pauseButton.onclick = () => {
+//     if(playing){ pauseSlideshow(); }
+//     else{ playSlideshow(); }
+// };
 
-let next_btn = document.querySelector('#next');
-let previous_btn = document.querySelector('#previous');
+// let next_btn = document.querySelector('#next');
+// let previous_btn = document.querySelector('#previous');
 
-next_btn.onclick = () => {
-   /* 
-    when the next button is clicked do two things:
-      1. run the pauseSLideshow function
-      2. run the nextSlide function (adding 1 to the currentSlide)
-    */
-    pauseSlideshow();
-    nextSlide();
-};
-previous_btn.onclick = () => {
-  /* 
-   when the next button is clicked do two things:
-     1. run the pauseSLideshow function
-     2. run the previousSlide function (removing 1 from the currentSlide)
-   */
-    pauseSlideshow();
-    previousSlide();
-};
+// next_btn.onclick = () => {
+//    /* 
+//     when the next button is clicked do two things:
+//       1. run the pauseSLideshow function
+//       2. run the nextSlide function (adding 1 to the currentSlide)
+//     */
+//     pauseSlideshow();
+//     nextSlide();
+// };
+// previous_btn.onclick = () => {
+//   /* 
+//    when the next button is clicked do two things:
+//      1. run the pauseSLideshow function
+//      2. run the previousSlide function (removing 1 from the currentSlide)
+//    */
+//     pauseSlideshow();
+//     previousSlide();
+// };

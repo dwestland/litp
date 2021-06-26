@@ -6,9 +6,21 @@
 {% extends "base.njk" %}
 
 {% block content %}
-    <main>
-      <div class="new-hero">
-        <div class="container">
+      <div class="container">
+
+      <div class="hero">
+        <!-- <div class="hero-shade"> -->
+
+          <div class="hero-text">
+            <!-- <div class="topspan">Adriane Westland Presents</div> -->
+            <h1>Living in the Palisades</h1>
+            <h2 class="sub-title">The ultimate resource for Pacific Palisades Real Estate since 1994</h2>
+            <div class="hero-buttons">
+              <a href="#">I want to buy</a>
+              <a href="#">I want to sell</a>
+            </div>
+          </div>
+
           <ul id="all_slides">
             <li class="slide active"></li>
             <li class="slide"></li>
@@ -16,10 +28,18 @@
             <li class="slide"></li>
             <li class="slide"></li>
           </ul>
-        </div>
+
+        <!-- </div> -->
       </div>
+    </div>
+    <main>
+      <h2 id="search">Home Search</h2>
       <div class="idx-search-wrapper">
-        <script type="text/javascript" src="http://www.themls.com/IDXNET/Scripts/idxwidget.js"></script><iframe id="idxFrame"  style="padding:0; margin:0; padding-top: 0px; border:0px solid transparent; background-color:transparent;" frameborder="0" scrolling="no" src="http://www.themls.com/IDXNET/Default.aspx?wid=MgMVwPGG6%2fe%2fZu%2fuu3lAM0DUCXY3xRCLvXoCbb1PA8ljA5hnj25u6%2bY2dY%2blg8ET" width="933px" height="900px"></iframe>
+        <script type="text/javascript" src="https://www.themls.com/IDXNET/Scripts/idxwidget.js"></script><iframe id="idxFrame"  style="padding:0; margin:0; padding-top: 0px; border:0px solid transparent; background-color:transparent;" frameborder="0" scrolling="no" src="https://www.themls.com/IDXNET/Default.aspx?wid=MgMVwPGG6%2fe%2fZu%2fuu3lAM0DUCXY3xRCLvXoCbb1PA8ljA5hnj25u6%2bY2dY%2blg8ET" width="933px" height="900px"></iframe>
       </div>
     </main>
+
+
+
 {% endblock %}
+
