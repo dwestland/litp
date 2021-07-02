@@ -1,12 +1,24 @@
 {% extends "base.njk" %}
 {% set page_title = 'Living in the Palisades' %}
 {% set page_description = '' %}
-{% set append_head = '' %}
+{% set append_head = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">' %}
 
 {% extends "base.njk" %}
 
 {% block content %}
 <main>
-
+  <div class="splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide">Slide 01</li>
+        <li class="splide__slide">Slide 02</li>
+        <li class="splide__slide">Slide 03</li>
+      </ul>
+    </div>
+  </div>
 </main>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+
+<!-- https://splidejs.com/getting-started/ -->
+
 {% endblock %}
