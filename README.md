@@ -13,6 +13,7 @@
 - Lease Form
 - Contact Form
 - Old IDX working ??
+- Remove content form top level directories, removed link to get mobile menu to work
 
 
 
