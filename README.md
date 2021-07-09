@@ -19,8 +19,8 @@
 
 **Desktop first media queries**
 ```
- @media (max-width: 600px) {}  // Mobile
- @media (min-width: 601px) and (max-width: 1199px) {} // Tablet
+@media (max-width: 600px) {}  // Mobile 
+@media (max-width: 992px) {}  // Tablet
 ```
 
 **Run local dev:**

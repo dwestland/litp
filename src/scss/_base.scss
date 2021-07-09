@@ -47,7 +47,7 @@ button {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   a,
   button {
     cursor: default !important;
@@ -96,4 +96,10 @@ video {
 .idx-search-wrapper {
   margin-top: 40px;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .idx-search-wrapper {
+    display: none;
+  }
 }

@@ -94,7 +94,7 @@ button {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   a,
   button {
     cursor: default !important;
@@ -654,4 +654,28 @@ video {
   display: block;
   width: 100%;
   min-height: 100vh;
+}
+
+.adriane-block-mobile {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .header-item-left {
+    .adriane-block {
+      display: none;
+    }
+    .adriane-block-mobile {
+      display: block;
+      text-align: center;
+      .name {
+        color: #e91e63;
+        font-size: 24px;
+      }
+      .phone {
+        font-size: 22px;
+      }
+
+    }
+  }
 }
