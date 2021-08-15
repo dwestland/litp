@@ -72,15 +72,15 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  overflow-x: hidden;
-  color: #121212;
-  background: #ffffff;
-}
+// body {
+//   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+//   font-size: 1rem;
+//   font-weight: 400;
+//   line-height: 1.5;
+//   overflow-x: hidden;
+//   color: #121212;
+//   background: #ffffff;
+// }
 
 a,
 button {
@@ -94,7 +94,7 @@ button {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 600px) {
   a,
   button {
     cursor: default !important;
@@ -648,12 +648,6 @@ video {
     opacity: 1;
     visibility: visible;
   }
-}
-
-.main {
-  display: block;
-  width: 100%;
-  min-height: 100vh;
 }
 
 .adriane-block-mobile {
