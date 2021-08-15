@@ -1,4 +1,4 @@
-## LivingInThePalisades.com
+## litp
 
 **Desktop first media queries**
 ```
