@@ -28,6 +28,10 @@ let slideInterval = setInterval(nextSlide, 6000);
 
 // which slide to move to as denoted by "s"
 const goToSlide = (s) => {
+  if (typeof(slides[currentSlide].className) === 'undefined') {
+    return null
+  }
+
   /* 
    when this function is run, hide all slides
    since the slide class has opacity set to 0.

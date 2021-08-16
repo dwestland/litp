@@ -64,3 +64,4 @@ window.onresize = function () {
       }
    }
 };
+console.log('end of menu')

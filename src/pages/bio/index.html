@@ -1,26 +1,51 @@
 {% extends "base.njk" %}
-{% set page_title = 'Living in the Palisades' %}
-{% set page_description = '' %}
+{% set page_title = 'Contact Adriane Westland' %}
+{% set page_description = 'Contact Adriane, a top-producing real estate agent in Pacific Palisades, Brentwood and Santa Monica' %}
 {% set append_head = '' %}
 
 {% extends "base.njk" %}
 
 {% block content %}
     <main>
-      <img src="/images/adriane_westland.jpg" width="350px" alt="Adriane Westland">
-      <a href="mailto:AKWRealtor@gmail.com" class="btn btn-secondary">Email Me</a>
-      <h1>Adriane Kallie Westland</h1>
-      <h2>About me</h2>
-      <p>Adriane Westland is a full-service Associate Broker with Rodeo Realty Fine Estate in Brentwood and Pacific Palisades offices. She is a  top selling realtor on the Westside for over 28 years. Born and raised in Santa Monica, Adriane is not only very knowledgeable of the local areas but both her father and grandfather were in the real estate business as well!  She is known for her stellar work ethic and thorough grasp of the marketplace. Her in-depth local knowledge, decades of experience and a degree in real estate finance, give Adriane a strong competitive edge over other agents in the area. Her level of service to clients is exceptional and her professionalism is backed by the extensive resources of Rodeo Realty.</p>
+      <div class="about-photo-and-text">
+
+        <div class="about-photo">
+          <img src="/images/adriane_westland.jpg" width="350px" alt="Adriane Westland">
+        </div>
+
+        <div class="about-text">
+          <h1>Adriane Kallie Westland</h1>
+          <h2>About me</h2>
+          <p><a href="mailto:AKWRealtor@gmail.com" class="btn btn-secondary"><i class="fas fa-envelope"></i> &nbsp;Email Me</a></p>
+          <p>Adriane Westland is a full-service Associate Broker with Rodeo Realty Fine Estate in Brentwood and Pacific Palisades offices. She is a  top selling realtor on the Westside for over 28 years. Born and raised in Santa Monica, Adriane is not only very knowledgeable of the local areas but both her father and grandfather were in the real estate business as well!  She is known for her stellar work ethic and thorough grasp of the marketplace. Her in-depth local knowledge, decades of experience and a degree in real estate finance, give Adriane a strong competitive edge over other agents in the area. Her level of service to clients is exceptional and her professionalism is backed by the extensive resources of Rodeo Realty.</p>
+        </div>
+
+      </div>
+
       <p>For the past 28 years, Adriane has specialized in the sale of Homes, Estates, Condos and Apartments Complexes on the Westside of Los Angeles. These areas include Brentwood, Pacific Palisades, Santa Monica, Westwood, Bel Air, Beverly Hills, Venice and Marina Del Rey. Her continued recognition as a top selling broker has earned her entry  into the coveted “Hall of Fame” club.  Further, her continued success for over 28 years, and through all different real estate markets, demonstrates she knows what is needed to succeed, year after year.</p>
       <p>She also has extensive probate and trust experience, which can be tricky for realtors not familiar with the laws and disclosures necessary. She is well versed in what it takes to sell a property held in a trust and the probate process. </p><p>For Sellers, Adriane will lay out a detailed marketing plan, go over the best times to sell, and even help you stage your property by rearranging furniture and de-cluttering to maximize home appeal.  All to help you net top dollar.</p>
       <p>For Buyers,   Adriane will help you decide on the best areas for you, help get you pre-approved with a lender, preview properties for you, and set up private appointments for you to view the properties that best fit your needs.   Having in-depth knowledge of the areas around Los Angeles, Adriane’s experience will help you minimize valuable time spent looking at “everything,” and help you concentrate only on those properties that will work for you.  Further, working with Adriane as your Buyer’s agent is a free service to Buyers.</p>
       <p>In additions to sales, Adriane has given talks on relocation, been interviewed by the BBC over the booming Los Angeles market, has been a market consultant to financial firms, and even taught sales classes to new agents.  Adriane is also very involved in local charities and sits on the Board of Directors for a well known local charity. Being a dedicated mother of two, she is also very involved in local schools.  Her children are avid sailors and short videos of their escapades is located in the “video section” above.</p>
       <p>Let Adriane put her knowledge and experience to work for you.  Call today for a <a href="market_analysis.html">Free Market Evaluation</a> of your property, or a free consultation to discover what is available to purchase in your desired price range.  If Adriane does not service your area, she can assist you in finding the right agent for you in the area you desire. My sales and marketing experience can help make you next move, a smooth move. </p>
-      <p class="bio-paragraphs"><strong><a href="contact.html">Click to contact me here</a> , or call me at 310 403 5535.</strong>
+      <p class="bio-paragraphs"><strong><a href="/contact">Click to contact me here</a> , or call me at <i class="fas fa-phone"></i> 310 403 5535.</strong>
     </main>
 
+<script>
+  gsap.from(".about-text", {
+        opacity: 0,
 
+        x: '-2400',
+        duration: 1.5,
+        ease: 'power1'
+  })
+  
+  gsap.from(".about-photo", {
+        opacity: 0, 
+
+        x: '2400', 
+        duration: 2,
+        ease: 'power1'
+  },0);
+</script>
 
 {% endblock %}
-
