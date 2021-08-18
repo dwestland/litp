@@ -46,10 +46,18 @@ video {
   max-width: 100%;
 }
 
+// Used on all pages except home
+main {
+  background: #ffffff;
+  height: auto;
+  margin: 120px auto 40px;
+  max-width: 1200px;
+  min-height: calc(100vh-110px);
+  padding: 0 20px;
+}
+
+// Used on home only
 .container {
-  // border: 1px dashed green;
-  // max-width: 80rem;
-  // padding: 0 2rem;
   height: auto;
   margin: 90px auto 20px;
   width: 100%;
@@ -62,16 +70,6 @@ video {
     padding: 0;
     margin: 0 auto;
   }
-}
-
-main {
-  background: #ffffff;
-  height: auto;
-  margin: 120px auto 40px;
-  max-width: 1200px;
-  min-height: calc(100vh-110px);
-  padding: 0 20px;
-
 }
 
 

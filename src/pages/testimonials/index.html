@@ -41,6 +41,16 @@
         Fara</p>
     </div>
   </div>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+  <script>
+    gsap.from(".testimonial", {
+          opacity: 0,
+          delay: .7,
+          y: '800',
+          duration: .5,
+          ease: 'power1',
+          stagger: .2
+    })
+  </script>
 </main>
 {% endblock %}
