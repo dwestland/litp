@@ -65,10 +65,46 @@ main {
   border: 1px solid blue;
 }
 
+.bs {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(104, 76, 76, 0.3);
+}
+
 @media only screen and (max-width: 992px) {
   .container {
     padding: 0;
     margin: 0 auto;
+  }
+}
+
+/* Listed Properties
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#featured div, #soldLeased div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.property-card {
+  background: #fff;
+  border-radius: 4px;
+  display: inline-block !important;
+  margin: 1rem .3rem;
+  padding: 10px;
+  width: 280px;
+
+  img {
+    height: 195px;
+    width: 260px;
+  }
+
+  .body {
+    padding: 10px;
+  }
+
+  h4 {
+    font-size: 1.6em;
+    font-weight: 400;
+    margin-bottom: .3em;
   }
 }
 

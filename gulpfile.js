@@ -51,11 +51,11 @@ function imageTask() {
     .pipe(dest('dist/images'));
 }
 
-// SVG Task
-function svgTask() {
-  return src('src/svg/*')
-    .pipe(svgmin())
-    .pipe(dest('dist/svg'));
+// Image Properties Task
+function imagePropertiesTask() {
+  return src('src/images-properties/*')
+    .pipe(imagemin())
+    .pipe(dest('dist/images-properties'));
 }
 
 // Browsersync Tasks
@@ -80,7 +80,7 @@ function watchTask() {
   watch('src/scss/**/*.scss', series(scssTask, browsersyncReload));
   watch('src/js/**/*.js', series(jsTask, browsersyncReload));
   watch('src/images/*', series(imageTask, browsersyncReload));
-  watch('src/svg/*', series(svgTask, browsersyncReload));
+  watch('src/images-properties/*', series(imagePropertiesTask, browsersyncReload));
 }
 
 // Default Gulp Task
@@ -90,7 +90,7 @@ exports.default = series(
   scssTask,
   jsTask,
   imageTask,
-  svgTask,
+  imagePropertiesTask,
   browsersyncServe,
   watchTask
 );
