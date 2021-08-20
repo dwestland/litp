@@ -76,6 +76,64 @@ main {
   }
 }
 
+/* Neighborhoods
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.neighborhood-container {
+  border: 1px solid green;
+  display: flex;
+  height: 125px;
+
+  .photo {
+    border: 1px solid blue;
+    width: 66%;
+  }
+
+  img {
+    height: 125px;
+    object-fit: cover;
+  }
+
+  .map {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 125px;
+    position: relative;
+    width: 34%;
+
+    iframe{
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+}
+
+.neighborhood-description {
+  border: 1px solid black;
+  width: 100%
+}
+
+@media (max-width: 600px) {
+  .neighborhood-container {
+    flex-direction: column;
+
+    .map {
+      width: 100%;
+      height: 125px;
+    }
+
+    .photo {
+      width: 100%;
+      height: 125px;
+    }
+  }
+  .neighborhood-description {
+    margin-top: 125px;
+  }
+}
+
 /* Listed Properties
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #featured div, #soldLeased div {
