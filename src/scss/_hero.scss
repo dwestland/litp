@@ -1,9 +1,3 @@
-// * {
-//   margin: 0;
-//   padding: 0;
-// }
-
-
 .hero {
   background-position: center right;
   background-repeat: no-repeat;
@@ -14,35 +8,19 @@
   position: relative;
   width: 100%;
 
-  // .hero-shade {
-  //   background-color: rgba(0,0,0, 0.4);
-  //   width: 100%;
-  //   height: 100%;
-
-  // }
-
   .hero-text {
     color: #fff;
     left: 50%;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 900px;
     position: absolute;
     text-align: center;
+    text-shadow: 1px 1px 1px rgb(75, 75, 75);
     top: 40%;
     transform: translate(-50%, -50%);
     width: 100%;
     z-index: 3;
-
-    text-shadow: 1px 1px 1px rgb(75, 75, 75);
-
-    
   }
-
-  // .topspan {
-  //   font-size: 24px;
-  //   font-weight: 600;
-  //   // text-transform: uppercase;
-  // }
 
   h1 {
     font-size: 86px;
@@ -58,30 +36,73 @@
     margin-top: 5px;
   }
 
+  /* Search Bar
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .search-bar {
+    align-items: center;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    margin: 30px 0 40px;
+    padding-left: 5px;
+
+    input {
+      background: white;
+      border: none;
+      font-weight: 200;
+      height: 100%;
+    }
+
+    .address-input {
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+      padding-left: 20px;
+      width: 300px;
+    }
+    
+    .amount-input {
+      border-left: 1px solid lightgray;
+      padding-left: 12px;
+      width: 120px;
+    }
+
+    input:focus{
+      outline: none;
+  }
+
+    button {
+      background: hsl(0, 81%, 56%);
+      color: white;
+      font-weight: 700;
+      height: 100%;
+      padding-left: 10px;
+      width: 170px;
+    }
+
+    .triangle {
+      border-bottom: 30px solid transparent;
+      border-left: 30px solid hsl(0, 81%, 56%);
+      border-top: 30px solid transparent;
+      height: 0; 
+      width: 0; 
+    }
+  }
+
   .hero-buttons {
-    margin-top: 28px;
-    max-width: 500px;
-    // width: 100%;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
-
-    display: flex;
+    margin-top: 28px;
+    max-width: 500px;
 
     a {
-
-      // -ms-flex-align: center;
-      // -o-transition: all .3s ease;
-      // -webkit-box-align: center;
-      // -webkit-box-pack: center;
-      // -webkit-transition: all .3s ease;
-      // text-align: center;
-      // transition: all .3s ease;
       align-items: center;
       background: #000;
+      border-radius: 5px;
       color: #fff;
       display: flex;
       font-size: 14px;
-      height: 57px;
+      height: 60px;
       justify-content: center;
       margin: 0 3px;
       text-transform: uppercase;
@@ -89,27 +110,73 @@
     }
   }
 
-  // Carousel
+  /* Search Bar - Mobile
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+  @media (max-width: 600px) {
+    .hero-text {
+      h1 {
+        font-size: 58px;
+        margin-top: 40px;
+      }
+
+      h2 {
+        display: none;
+      }
+    }
+
+    .search-bar {
+      display: block;
+      height: 44px;
+      margin: 10px 0 160px;
+      padding: 0;
+
+      input {
+        border-radius: 5px;
+        height: 100%;
+        margin: 5px;
+      }
+
+      button {
+        background: hsl(0, 81%, 56%);
+        color: white;
+        font-weight: 700;
+        height: 150px;
+        padding-left: 10px;
+        width: 170px;
+        height: 60px;
+      }
+  
+      .triangle {
+        display: none;
+      }
+    }
+
+    max-width: none;
+  }
+
+
+  /* Carousel
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
   #all_slides {
-      position: relative;
       height: 100vh;
-      padding: 0px;
-      margin: 0px;
       list-style-type: none;
+      margin: 0px;
+      padding: 0px;
+      position: relative;
   }
 
   .slide {
-      position: absolute;
-      left: 0px;
-      top: 0px;
-      width: 100%;
       height: 100%;
+      left: 0px;
       opacity: 0;
+      position: absolute;
+      top: 0px;
+      transition: opacity 2s;
+      width: 100%;
       z-index: 1;
-      -webkit-transition: opacity 2s;
       -moz-transition: opacity 2s;
       -o-transition: opacity 2s;
-      transition: opacity 2s;
+      -webkit-transition: opacity 2s;
   }
 
   .active {
@@ -194,17 +261,5 @@
     top: 0px;
     z-index: 10;
     font-size: 0px;
-  }
-}
-
-@media (max-width: 600px) {
-  .hero-text {
-    h1 {
-      font-size: 58px;
-      margin-top: 100px;
-    }
-    h2 {
-      font-size: 22px;
-    }
   }
 }

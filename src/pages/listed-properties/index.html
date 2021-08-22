@@ -397,6 +397,7 @@
 
   ScrollTrigger.batch(".property-card", {
     // markers: true,
+    once: true,
     start: "top 80%",
     onEnter: (batch) =>
       gsap.from(batch, {
