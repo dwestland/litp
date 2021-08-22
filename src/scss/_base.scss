@@ -136,7 +136,7 @@ main {
 
 /* Listed Properties
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-#featured div, #soldLeased div {
+#featured > div, #soldLeased > div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -148,6 +148,7 @@ main {
   display: inline-block !important;
   margin: 1rem .3rem;
   padding: 10px;
+  visibility: hidden;
   width: 280px;
 
   img {
@@ -155,7 +156,7 @@ main {
     width: 260px;
   }
 
-  .body {
+  .card-body {
     padding: 10px;
   }
 
@@ -163,6 +164,7 @@ main {
     font-size: 1.6em;
     font-weight: 400;
     margin-bottom: .3em;
+    width: 100%;
   }
 }
 
