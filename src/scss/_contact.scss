@@ -35,7 +35,7 @@
   }
 
   button {
-    background: $dark-blue;
+    background: var(--dark-blue);
     border-radius: 5px;
     color: white;
     cursor: pointer;
@@ -50,20 +50,20 @@
   }
 
   .message-success {
-    background: $light-green;
+    background: var(--light-green);
     border-radius: 3px;
-    border: 1px solid $dark-green;
-    color: $dark-green;
+    border: 1px solid var(--dark-green);
+    color: var(--dark-green);
     display: block;
     margin-top: 60px;
     padding: 10px;
   }
 
   .message-error {
-    background: $light-red;
+    background: var(--light-red);
     border-radius: 3px;
-    border: 1px solid $dark-red;
-    color: $dark-red;
+    border: 1px solid var(--dark-red);
+    color: var(--dark-red);
     display: block;
     margin-top: 60px;
     padding: 10px;

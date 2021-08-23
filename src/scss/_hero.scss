@@ -110,13 +110,14 @@
     }
   }
 
-  /* Search Bar - Mobile
+  /* Mobile
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
   @media (max-width: 600px) {
     .hero-text {
       h1 {
         font-size: 58px;
-        margin-top: 40px;
+        // margin-top: calc(110px + 5vh);
+        margin-top: 160px;
       }
 
       h2 {

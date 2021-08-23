@@ -1,19 +1,21 @@
-$text-color: #2e2e2e;
-
-$blue: #4285F4;
-$red: #DB4437;
-$yellow: #F4B400;;
-$green: #0F9D58;;
-
-$dark-blue: #285092;
-$dark-red: #8C2820;
-$dark-yellow: #7E5E03;
-$dark-green: #1A542A;
-
-$light-blue: #ccdfff;
-$light-red: #ffd6d2;
-$light-yellow: #ffecb4;
-$light-green: #c4e6cd;
-
-$light-gray: #e0e0e0;
-$lighter-gray: #e2e2e2;
+:root {
+  --text-color: hsl(0, 0%, 18%);
+  
+  --blue: hsl(217, 89%, 61%);
+  --red: hsl(5, 69%, 54%);
+  --yellow: hsl(44, 100%, 48%);;
+  --green: hsl(151, 83%, 34%);;
+  
+  --dark-blue: hsl(217, 57%, 36%);
+  --dark-red: hsl(4, 63%, 34%);
+  --dark-yellow: hsl(44, 95%, 25%);
+  --dark-green: hsl(137, 53%, 22%);
+  
+  --light-blue: hsl(218, 100%, 90%);
+  --light-red: hsl(5, 100%, 91%);
+  --light-yellow: hsl(45, 100%, 85%);
+  --light-green: hsl(136, 40%, 84%);
+  
+  --light-gray: hsl(0, 0%, 88%);
+  --lighter-gray: hsl(0, 0%, 89%);
+}

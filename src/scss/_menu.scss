@@ -132,7 +132,7 @@ video {
 //   font-size: 1.75rem;
 //   font-weight: 700;
 //   line-height: inherit;
-//   color: #e91e63;
+//   color: var(--blue);
 //   border: none;
 //   outline: none;
 //   text-transform: uppercase;
@@ -255,7 +255,7 @@ video {
   opacity: 0;
   visibility: hidden;
   border-radius: 0.25rem;
-  border-top: 3px solid #e91e63;
+  border-top: 3px solid var(--blue);
   background: #ffffff;
   -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
           box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -345,7 +345,7 @@ video {
   padding: 0.75rem 0;
   border: none;
   outline: none;
-  color: #e91e63;
+  color: var(--blue);
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
   -webkit-transition: all 0.3s ease-in-out;
@@ -369,12 +369,12 @@ video {
 
 .header .menu > ul > li .menu-subs.menu-mega > .list-item > ul > li > a:hover,
 .header .menu > ul > li .menu-subs > ul > li > a:hover {
-  color: #e91e63;
+  color: var(--blue);
 }
 
 .header-item-right a:hover,
 .header .menu > ul > li:hover > a {
-  color: #e91e63;
+  color: var(--blue);
 }
 
 @media only screen and (min-width: 993px) {
@@ -663,7 +663,7 @@ video {
       display: block;
       text-align: center;
       .name {
-        color: #e91e63;
+        color: var(--blue);
         font-size: 24px;
       }
       .phone {
