@@ -8,5 +8,92 @@
 {% block content %}
 <main>
 
+  <h1>Hiking Trails</h1>
+  <h2>Hiking trails in Pacific Palisades</h2>
+
+  <div id="places"></div>
+<script>
+const hikingTrails = [
+  {
+    property: "Temescal Canyon Park",
+    googleMap: "https://www.google.com/maps/place/Temescal+Canyon+Park/@34.0529725,-118.5308928,17z/data=!4m8!1m2!2m1!1sTemescal+Canyon+Gateway+Park!3m4!1s0x80c2a3749a82ac79:0x7c5d8caac04e8212!8m2!3d34.0554344!4d-118.5276722",
+    image: "/images/places/temescal_canyon.jpg",
+    type: "",
+    address: "15900 Pacific Coast Hwy, Los Angeles, CA 90272",
+    phone: "(310) 840-2187"
+  },
+  {
+    googleMap: "https://www.google.com/maps/place/Los+Leones+Trailhead/@34.0481396,-118.5617515,16.76z/data=!4m13!1m7!3m6!1s0x80c2a3c1da170081:0xa26afb9ea48e8735!2sLos+Liones+Canyon+Trail,+Pacific+Palisades,+CA+90272!3b1!8m2!3d34.0499332!4d-118.5596851!3m4!1s0x0:0x4784781e695eba75!8m2!3d34.047355",
+    property: "Los Liones Trailhead",
+    image: "/images/places/los_leones.jpg",
+    type: "",
+    address: "566 Los Liones Dr. Los Angeles, CA 90272",
+    phone: "",
+  },
+  {
+    property: "Parker Mesa Overlook",
+    googleMap: "https://www.google.com/maps/place/Parker+Mesa+Overlook/@34.0592204,-118.5760872,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2a3d0d54414e7:0x8210efd4b82735ce!8m2!3d34.0592204!4d-118.5738985",
+    image: "/images/places/parker_mesa.jpg",
+    type: "",
+    address: "Paseo Miramar Trail, Malibu, CA 90265",
+    phone: "",
+  },
+  {
+    property: "Will Rogers State Historic Park",
+    googleMap: "https://www.google.com/maps/place/Will+Rogers+State+Historic+Park/@34.0549447,-118.5147339,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2a36906648a8d:0xdd95ec0ce3ed77d8!8m2!3d34.0549447!4d-118.5125452",
+    image: "/images/places/will_rogers.jpg",
+    type: "",
+    address: "1501 Will Rogers Park Rd Pacific Palisades, CA 90272",
+    phone: "(310) 454-8212",
+  },
+  {
+    googleMap: "https://www.google.com/maps/place/Rivas+Canyon+Park/@34.0537117,-118.5227147,15.95z/data=!4m13!1m7!3m6!1s0x80c2a36ee98975b1:0xdde0566ca24ef3ff!2sRivas+Canyon+Trail,+Pacific+Palisades,+CA+90272!3b1!8m2!3d34.0545461!4d-118.517898!3m4!1s0x0:0x4d1f399bb1c775cf!8m2!3d34.05882",
+    property: "Rivas Canyon Trail",
+    image: "/images/places/rivas_canyon.jpg",
+    type: "",
+    address: "Temescal Gateway Park Pacific Palisades, CA 90272",
+    phone: "",
+  },
+  {
+    googleMap: "https://www.google.com/maps/place/Sullivan+Canyon+Preservation+Association/@34.0616608,-118.4985627,17z/data=!4m12!1m6!3m5!1s0x80c2a348c6280797:0xe3bcb294659fdfd1!2sSullivan+Canyon+Preservation+Association!8m2!3d34.0617764!4d-118.4965457!3m4!1s0x80c2a348c6280797:0xe3bcb294659fdfd1!8m2!3d34.061776",
+    property: "Sullivan Canyon Preservation",
+    image: "/images/places/sullivan_canyon.jpg",
+    type: "",
+    address: "1640 Old Oak Rd, Los Angeles, CA 90049",
+    phone: "(310) 454-5905",
+  }
+]
+
+places.innerHTML = hikingTrails.map(function (place) {
+    return (`
+    <div class="property-card bs" >
+      <img src="http://www.livinginthepalisades.com/${place.image}">
+      <div class="card-body">
+        <h4>${place.property}</h4>
+        <p>${place.address}</p>
+      </div>
+    </div>
+    `)
+  }).join('')
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollTrigger)
+
+  ScrollTrigger.batch(".property-card", {
+    // markers: true,
+    once: true,
+    start: "top 80%",
+    onEnter: (batch) =>
+      gsap.from(batch, {
+        autoAlpha: 0,
+        duration: 0.3,
+        ease: "power1",
+        stagger: 0.1,
+        y: "300"
+      })
+  })
+</script>
 </main>
 {% endblock %}

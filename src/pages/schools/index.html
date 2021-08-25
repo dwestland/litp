@@ -7,6 +7,109 @@
 
 {% block content %}
 <main>
+  <h1>Schools</h1>
+  <h2>Schools in Pacific Palisades</h2>
 
+  <div id="places"></div>
+
+<script>
+const schools = [
+  {
+    property: "Calvary Christian School",
+    googleMap: "https://www.google.com/maps/place/Calvary+Christian+School/@34.04854,-118.5551407,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2a39459a3572d:0x9e416fd0515bec3f!8m2!3d34.04854!4d-118.552952",
+    image: "/images/places/calvary_school.jpg",
+    type: "Elementary and Middle Schools",
+    address: "701 Palisades Drive, Pacific Palisades, CA 90272",
+    phone: "(310) 573-0082"
+  },
+  {
+    property: "Corpus Christi Catholic School",
+    googleMap: "https://www.google.com/maps/place/Corpus+Christi+School/@34.0443938,-118.5264505,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2a37b76a28c33:0x2a26ac0d02930767!8m2!3d34.0443938!4d-118.5242618",
+    image: "/images/places/corpus_catholic_school.jpg",
+    type: "Elementary and Middle Schools",
+    address: "890 Toyopa Dr, Pacific Palisades, CA 90272",
+    phone: "(310) 454-9411"
+  },
+  {
+    property: "Marquez Elementary School",
+    googleMap: "https://www.google.com/maps/place/Marquez+Charter+School/@34.0457705,-118.5497239,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2a390fe7c7b67:0x67d91573f148b0eb!8m2!3d34.0457705!4d-118.5475352",
+    image: "/images/places/marquez_school.jpg",
+    type: "Elementary and Middle Schools",
+    address: "16821 Marquez Avenue, Pacific Palisades, CA 90272",
+    phone: "(310) 454-4019"
+  },
+  {
+    property: "Palisades Elementary Charter School",
+    googleMap: "https://www.google.com/maps/place/Palisades+Elementary+Charter+School/@34.0449433,-118.5296381,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2a3797c19e75f:0x622b05e5fe055515!8m2!3d34.0449433!4d-118.5274494",
+    image: "/images/places/palisades_charter_school.jpg",
+    type: "Elementary and Middle Schools",
+    address: "800 Vía De La Paz, Pacific Palisades, CA 90272",
+    phone: "(310) 454-3700"
+  },
+  {
+    property: "St Matthew's Episcopal School",
+    googleMap: "https://www.google.com/maps/place/St+Matthew's+Episcopal+Church/@34.0539178,-118.544406,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2a3987c9e3923:0x913c28a0c7087925!8m2!3d34.0539178!4d-118.5422173",
+    image: "/images/places/saint_matthews.jpg",
+    type: "Elementary and Middle Schools",
+    address: "1031 Bienveneda Ave, Pacific Palisades, CA 90272",
+    phone: "(310) 454-1358"
+  },
+  {
+    property: "Village School",
+    googleMap: "https://www.google.com/maps/place/Village+School/@34.0446219,-118.5283377,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2a37bc18155eb:0x7af98ebe0a54d149!8m2!3d34.0446219!4d-118.526149",
+    image: "/images/places/village_school.jpg",
+    type: "Elementary and Middle Schools",
+    address: "780 N Swarthmore Ave, Pacific Palisades, CA 90272",
+    phone: "(310) 459-8411"
+  },
+  {
+    property: "Palisades Charter High School",
+    googleMap: "https://www.google.com/maps/place/Palisades+Charter+High+School/@34.0477547,-118.5331034,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2a3779300faa3:0xfb5dc89669b3715!8m2!3d34.0477547!4d-118.5309147",
+    image: "/images/places/palisades_charter.jpg",
+    type: "High Schools",
+    address: "15777 Bowdoin St, Pacific Palisades, CA 90272",
+    phone: "(310) 230-6623"
+  },
+  {
+    property: "Temescal Canyon High School",
+    googleMap: "https://www.google.com/maps/place/Temescal+Canyon+High+School/@33.7033926,-117.3497957,17z/data=!3m1!4b1!4m5!3m4!1s0x80dc99cf01c99ebb:0xecc141e1b34efb93!8m2!3d33.7033926!4d-117.347607",
+    image: "/images/places/temescal_school.jpg",
+    type: "Continuation Schools",
+    address: "28755 El Toro Rd, Lake Elsinore, CA 92532",
+    phone: "(951) 253-7250"
+  }
+]
+
+places.innerHTML = schools.map(function (place) {
+    return (`
+    <div class="property-card bs" >
+      <img src="http://www.livinginthepalisades.com/${place.image}">
+      <div class="card-body">
+        <h4>${place.property}</h4>
+        <p>${place.address}</p>
+      </div>
+    </div>
+    `)
+  }).join('')
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollTrigger)
+
+  ScrollTrigger.batch(".property-card", {
+    // markers: true,
+    once: true,
+    start: "top 80%",
+    onEnter: (batch) =>
+      gsap.from(batch, {
+        autoAlpha: 0,
+        duration: 0.3,
+        ease: "power1",
+        stagger: 0.1,
+        y: "300"
+      })
+  })
+</script>
 </main>
 {% endblock %}

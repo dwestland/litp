@@ -6,87 +6,116 @@
 {% extends "base.njk" %}
 
 {% block content %}
-<main>
-<h2>Pacific Palisades Homeowners Associations</h2>
-<p>Pacific Palisades is divided into several tracts which are governed by the Covenants, Conditions and Restrictions (CC&amp;Rs) of individual homeowners' associations dedicated to preserving and improving the community. In most instances, it is the legal obligation of the homeowner to obtain prior approval of new construction or proposed remodeling of residential property from the appropriate homeowner's association.</p>
 
-<table border="0" align="center" cellpadding="6" cellspacing="6" class="homeowner-table">
-  <tbody>
-  <tr height="30" bgcolor="#fff">
-    <th scope="col" width="190">Association</th>
-    <th scope="col" width="140">Mailing Address</th>
-    <th scope="col" width="200">Website</th>
-  </tr>
-  <tr bgcolor="#fff">
-    <td style="padding: 5px">California Riviera Homeowners Association</td>
-    <td style="padding: 5px">PO Box 1722</td>
-    <td style="padding: 5px">
-    <a href="http://www.rivierahomeowners.com" target="_blank">rivierahomeowners.com</a>
-    </td>
-  </tr>
-  <tr bgcolor="#fff">
-    <td style="padding: 5px">Castellammare Mesa Homeowners</td>
-    <td style="padding: 5px">PO Box 742</td>
-    <td style="padding: 5px"><a href="http://www.castellammaremesa.com" target="_blank">castellammaremesa.com</a></td>
-  </tr>
-    <tr bgcolor="#fff">
-    <td style="padding: 5px">Huntington Palisades Property Owners Corp. Ltd.</td>
-    <td style="padding: 5px">PO Box 1585</td>
-    <td style="padding: 5px"><a href="http://www.hppoc.org" target="_blank">hppoc.org</a></td>
-  </tr>
-  <tr bgcolor="#fff">
-    <td style="padding: 5px">Marquez Knolls Property Owners Association</td>
-    <td style="padding: 5px">PO Box 1307</td>
-    <td style="padding: 5px"><a href="http://www.marquezknolls.com" target="_blank">marquezknolls.com</a></td>
-  </tr>
-  <tr bgcolor="#fff">
-    <td style="padding: 5px">Miramar Homeowners Association</td>
-    <td style="padding: 5px">&nbsp;</td>
-    <td style="padding: 5px"><a href="http://www.miramarhoa.org" target="_blank">miramarhoa.org</a></td>
-  </tr>
-    <tr bgcolor="#fff">
-    <td style="padding: 5px">Pacific View Estates Homeowners Association</td>
-    <td style="padding: 5px">&nbsp;</td>
-    <td style="padding: 5px"><a href="http://www.pacificviewestates.org.com" target="_blank">pacificviewestates.org</a></td>
-  </tr>
-  <tr bgcolor="#fff">
-    <td style="padding: 5px">Palisades Highlands Presidents Council</td>
-    <td style="padding: 5px">1315 Palisades Dr.</td>
-    <td style="padding: 5px"><a href="http://www.pphra.com" target="_blank">pphra.com</a></td>
-  </tr>
-  <tr bgcolor="#fff">
-    <td style="padding: 5px">Palisair Homeowners Association</td>
-    <td style="padding: 5px">PO Box 901</td>
-    <td style="padding: 5px"><a href="http://www.palisair.org" target="_blank">palisair.org</a></td>
-  </tr>
-  <tr bgcolor="#fff">
-    <td style="padding: 5px">Riviera Estates Association</td>
-    <td style="padding: 5px">PO Box 1585</td>
-    <td style="padding: 5px"><a href="http://www.rivierahomeowners.com" target="_blank">rivierahomeowners.com</a></td>
-  </tr>
-  <tr bgcolor="#fff">
-    <td style="padding: 5px">Rustic Canyon Homeowners Association</td>
-    <td style="padding: 5px">&nbsp;</td>
-    <td style="padding: 5px">N/A</td>
-  </tr>
-  <tr bgcolor="#fff">
-    <td style="padding: 5px">Sunset Mesa Property Owners Association</td>
-    <td style="padding: 5px">&nbsp;</td>
-    <td style="padding: 5px"><a href="http://www.sunsetmesa.net" target="_blank">sunsetmesa.net</a></td>
-  </tr>
-  <tr bgcolor="#fff">
-    <td style="padding: 5px">Upper Riviera Homeowners Association</td>
-    <td style="padding: 5px">PO Box 373</td>
-    <td style="padding: 5px">N/A</td>
-  </tr>
-  <tr bgcolor="#fff">
-  </tr>
-  <tr bgcolor="#fff">
-    <td style="padding: 5px">West Sunset Homeowners Association</td>
-    <td style="padding: 5px">PO Box 1119</td>
-    <td style="padding: 5px">N/A</td>
-  </tr>
-  </tbody>
-</table>
+
+<main>
+  <h2>Pacific Palisades Homeowners Associations</h2>
+  <p>Pacific Palisades is divided into several tracts which are governed by the Covenants, Conditions and Restrictions (CC&amp;Rs) of individual homeowners' associations dedicated to preserving and improving the community. In most instances, it is the legal obligation of the homeowner to obtain prior approval of new construction or proposed remodeling of residential property from the appropriate homeowner's association.</p>
+
+  <div class="hoa-table">
+    <table>
+      <thead>
+      <tr class="table-headers">
+        <th>Association</th>
+        <th>Mailing Address</th>
+        <th>Website</th>
+      </tr>
+      </thead>
+      <tr>
+        <td>California Riviera Homeowners Association</td>
+        <th class="mobile-header">Mailing Address</th><td>PO Box 1722</td>
+        <th class="mobile-header">Website<a href="http://www.rivierahomeowners.com" target="_blank">rivierahomeowners.com</a>
+        </th>
+      </tr>
+      <tr>
+        <td>Castellammare Mesa Homeowners</td>
+        <th class="mobile-header">Mailing Address</th><td>PO Box 742</td>
+        <th class="mobile-header">Website</th><td><a href="http://www.castellammaremesa.com" target="_blank">castellammaremesa.com</a></td>
+      </tr>
+        <tr>
+        <td>Huntington Palisades Property Owners Corp. Ltd.</td>
+        <th class="mobile-header">Mailing Address</th><td>PO Box 1585</td>
+        <th class="mobile-header">Website</th><td><a href="http://www.hppoc.org" target="_blank">hppoc.org</a></td>
+      </tr>
+      <tr>
+        <td>Marquez Knolls Property Owners Association</td>
+        <th class="mobile-header">Mailing Address</th><td>PO Box 1307</td>
+        <th class="mobile-header">Website</th><td><a href="http://www.marquezknolls.com" target="_blank">marquezknolls.com</a></td>
+      </tr>
+      <tr>
+        <td>Miramar Homeowners Association</td>
+        <th class="mobile-header">Mailing Address</th><td>&nbsp;</td>
+        <th class="mobile-header">Website</th><td><a href="http://www.miramarhoa.org" target="_blank">miramarhoa.org</a></td>
+      </tr>
+        <tr>
+        <td>Pacific View Estates Homeowners Association</td>
+        <th class="mobile-header">Mailing Address</th><td>&nbsp;</td>
+        <th class="mobile-header">Website</th><td><a href="http://www.pacificviewestates.org.com" target="_blank">pacificviewestates.org</a></td>
+      </tr>
+      <tr>
+        <td>Palisades Highlands Presidents Council</td>
+        <th class="mobile-header">Mailing Address</th><td>1315 Palisades Dr.</td>
+        <th class="mobile-header">Website</th><td><a href="http://www.pphra.com" target="_blank">pphra.com</a></td>
+      </tr>
+      <tr>
+        <td>Palisair Homeowners Association</td>
+        <th class="mobile-header">Mailing Address</th><td>PO Box 901</td>
+        <th class="mobile-header">Website</th><td><a href="http://www.palisair.org" target="_blank">palisair.org</a></td>
+      </tr>
+      <tr>
+        <td>Riviera Estates Association</td>
+        <th class="mobile-header">Mailing Address</th><td>PO Box 1585</td>
+        <th class="mobile-header">Website</th><td><a href="http://www.rivierahomeowners.com" target="_blank">rivierahomeowners.com</a></td>
+      </tr>
+      <tr>
+        <td>Rustic Canyon Homeowners Association</td>
+        <th class="mobile-header">Mailing Address</th><td>&nbsp;</td>
+        <th class="mobile-header">Website</th><td>N/A</td>
+      </tr>
+      <tr>
+        <td>Sunset Mesa Property Owners Association</td>
+        <th class="mobile-header">Mailing Address</th><td>&nbsp;</td>
+        <th class="mobile-header">Website</th><td><a href="http://www.sunsetmesa.net" target="_blank">sunsetmesa.net</a></td>
+      </tr>
+      <tr>
+        <td>Upper Riviera Homeowners Association</td>
+        <th class="mobile-header">Mailing Address</th><td>PO Box 373</td>
+        <th class="mobile-header">Website</th><td>N/A</td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td>West Sunset Homeowners Association</td>
+        <th class="mobile-header">Mailing Address</th><td>PO Box 1119</td>
+        <th class="mobile-header">Website</th><td>N/A</td>
+      </tr>
+      </thead>
+    </table>
+  </div>
 </main>
+
+<script>
+  document.querySelector(window).addEventListener('resize', function() {
+    
+    if (document.querySelector(this).width() < 760) {
+       document.querySelector('tr td:first-child').click(function(){
+
+          document.querySelector(this).siblings().css({'display': 'inline-block'});
+
+          var $this = document.querySelector(this);
+          setTimeout(function(){
+          $this.siblings().css('transform', 'translateY(0)'); 
+         },0);
+
+          document.querySelector('tr td:first-child').not(document.querySelector(this)).siblings().css({'display': 'none', 'transform': 'translateY(-9999px)'});
+      });  
+    } else if (document.querySelector(this).width() > 760) {
+        //unbind click : name is not clickable when screen is > 700px
+        document.querySelector( "tr td:first-child").unbind( "click" );
+        //remove with jquery added styles
+        document.querySelector('tr td:first-child').siblings().css({'display': '', 'transform': ''});
+    }
+
+}).resize();
+</script>
 {% endblock %}
