@@ -58,6 +58,13 @@ function imagePropertiesTask() {
     .pipe(dest('dist/images-properties'));
 }
 
+// Image Properties Task
+function imagePlacesTask() {
+  return src('src/images-places/*')
+    .pipe(imagemin())
+    .pipe(dest('dist/images-places'));
+}
+
 // Browsersync Tasks
 function browsersyncServe(cb) {
   browsersync.init({
@@ -80,6 +87,7 @@ function watchTask() {
   watch('src/scss/**/*.scss', series(scssTask, browsersyncReload));
   watch('src/js/**/*.js', series(jsTask, browsersyncReload));
   watch('src/images/*', series(imageTask, browsersyncReload));
+  watch('src/images-places/*', series(imagePlacesTask, browsersyncReload));
   watch('src/images-properties/*', series(imagePropertiesTask, browsersyncReload));
 }
 
@@ -90,6 +98,7 @@ exports.default = series(
   scssTask,
   jsTask,
   imageTask,
+  imagePlacesTask,
   imagePropertiesTask,
   browsersyncServe,
   watchTask
