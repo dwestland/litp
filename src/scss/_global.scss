@@ -120,30 +120,35 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-
-.property-card {
-  background: #fff;
-  border-radius: 4px;
-  display: inline-block !important;
-  margin: 1rem .3rem;
-  padding: 10px;
-  visibility: hidden;
-  width: 280px;
-
-  img {
-    height: 195px;
-    width: 260px;
-  }
-
-  .card-body {
+.places {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+  .property-card {
+    background: #fff;
+    border-radius: 4px;
+    display: inline-block !important;
+    margin: 1rem .3rem;
     padding: 10px;
-  }
-
-  h4 {
-    font-size: 1.6em;
-    font-weight: 400;
-    margin-bottom: .3em;
-    width: 100%;
+    visibility: hidden;
+    width: 280px;
+  
+    img {
+      height: 195px;
+      width: 260px;
+    }
+  
+    .card-body {
+      padding: 10px;
+    }
+  
+    h4 {
+      font-size: 1.6em;
+      font-weight: 400;
+      margin-bottom: .3em;
+      width: 100%;
+    }
   }
 }
 
