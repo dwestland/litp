@@ -10,10 +10,10 @@
   <h1>Listed Properties</h1>
 
   <h2>Featured Properties</h2>
-  <div id="featured"></div>
+  <div id="featured" class="places"></div>
 
   <h2>Sold/Leased Properties</h2>
-  <div id="soldLeased"></div>
+  <div id="soldLeased" class="places"></div>
 
 </main>
 
@@ -377,7 +377,7 @@
     `)
   }).join('')
 
-  soldLeased.innerHTML = '<div>' + soldLeasedProperties.map(function (property) {
+  soldLeased.innerHTML = soldLeasedProperties.map(function (property) {
     return (`
     <div class="property-card bs" >
       <img src="${property.image}">
