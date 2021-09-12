@@ -1,10 +1,11 @@
-console.log('I am contact-form')
+console.log('I am contact-form in js')
 
 // Messaging
 const sendForm = (e) => {
+  ////////////////////////////////////////////////////////////////////////////////////////////////
   console.log('%c e ', 'background: red; color: white', e)
   e.preventDefault()
-  const MAILER_URL = 'https://api.westland.net/message-mailer/'
+  const MAILER_URL = 'https://api.westland.net/litp-mailer/'
   // Form constants
   const name = document.getElementById('name').value.trim()
   const phone = document.getElementById('phone').value.trim()
@@ -13,7 +14,7 @@ const sendForm = (e) => {
   const now = new Date()
   // Mailgun constants
   const email = `postmaster@mg.westland.net`
-  const subject = `WEBSITE MESSAGE from: ${name}`
+  const subject = `LITP WEBSITE MESSAGE from: ${name}`
   const text = (`Message from ${name}
     ${now}
     Name: ${name}
