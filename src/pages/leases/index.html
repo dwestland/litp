@@ -7,13 +7,70 @@
 
 {% block content %}
 <main>
-  <h3>Exclusive: Latest Pacific Palisades Leases</h3>
-  <h4>Call Adriane Westland at 310-403-5535 to Schedule a private showing</h4>
+  <h1>Exclusive: Latest Pacific Palisades Leases</h1>
+  <div class="aside-message">
+    <aside>
+      <h4>Let Me Find You the Right Lease</h4>
+      <div class="contact-form-wrapper">
+        <form id="message-form" autocomplete="on" novalidate>
+              <p>
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Name">
+                <span id="name-error" class="error-text"></span>
+                <br />
+              </p>
+              <p>
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" placeholder="Phone Number">
+                <span id="phone-email-error" class="error-text"></span>
+                <span id="phone-error" class="error-text"></span>
+                <br />
+              </p>
+              <p>
+                <label for="email_address">Or Email</label>
+                <input type="email" id="email_address" placeholder="Email">
+                <span id="email-error" class="error-text"></span>
+                <br />
+              </p>
 
-  <h4>Let Me Find You the Right Lease!</h4>
+              <p>Price Range?
+                <span>
+                  <select id="price">
+                    <!-- <option disabled selected value></option> -->
+                    <option value="" selected>Select Price</option>
+                    <option value="Lease $2K - $4K">$2K - $4K</option>
+                    <option value="Lease $4K - $7K">$4K - $7K</option>
+                    <option value="Lease $8K - $12K">$8K - $12K</option>
+                    <option value="Lease $12K+">$12K+</option>
+                  </select>
+                </span>
+              </p>
 
-  <div style="background: var(--light-blue); height: 800px; border: 1px solid var(--dark-blue); padding: 0 20px;">
-    <h2>MLS Search</h2>
+              <p>When do you want to lease? <br />
+                <input type="radio" name="time"  id="time" value="Lease Now" />
+                  &nbsp;&nbsp; Now!<br />
+                <input type="radio" name="time"  id="time" value="Lease 1 - 3 Months" />
+                  &nbsp;&nbsp; 1 - 3 Months<br />
+                <input type="radio" name="time"  id="time" value="Lease 3 - 6 Months" />
+                  &nbsp;&nbsp; 3 - 6 Months<br />
+                <input type="radio" name="time"  id="time" value="Lease 6 Months +" />
+                  &nbsp;&nbsp; 6 Months +
+              </p>
+
+              <p>
+                <label for="message">Message</label>
+                <textarea name="message" id="message" placeholder="Message" cols="30" rows="10"></textarea><br />
+              </p>
+          <button type="submit">Send Message</button>
+        </form>
+    
+        <div id="mailer-message"></div>
+      </div>
+    </aside>
+    <article>
+      <h4>Call Adriane Westland at 310-403-5535 to Schedule a private showing</h4>
+    </article>
+
   </div>
 
   <!-- 

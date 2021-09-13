@@ -8,15 +8,78 @@
 {% block content %}
 <main>
   <h1>Find a Home in Pacific Palisades with a Local Expert</h1>
-  <h2>Getting Started</h2>
-  <p>Buying a home can be the biggest investment you will ever make. It involves many considerations that go beyond simply choosing a house you like.</p>
-  <p>More than 80% of home buyers now start their search for a home online. After getting an idea of neighborhoods and pricing, an experience real estate broker can help you determine the trends and opportunities, as well as avoiding traps. I can assist you by first getting you pre-qualified for your loan so you can seize a good opportunity when in comes up. I can then alert you to available Pacific Palisades homes or in the area you desire as soon as they come on the market.</p>
-  <p>With over 28 years experience in Pacific Palisades and the Westside, I can help you get a property that is right for you.</p>
-  <p>Call direct at: 310-403-5535 or email at: <a href="mailto:AKWRealtor@gmail.com" id="mail-to">AKWRealtor@gmail.com</a>.</p>
-  
-  <div style="background: var(--light-blue); height: 800px; border: 1px solid var(--dark-blue); padding: 0 20px;">
-    <h2>MLS Search</h2>
+  <div class="aside-message">
+    <aside>
+      <h4>Let Me Find the Right Home for You!</h4>
+      <div class="contact-form-wrapper">
+        <form id="message-form" autocomplete="on" novalidate>
+              <p>
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Name">
+                <span id="name-error" class="error-text"></span>
+                <br />
+              </p>
+              <p>
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" placeholder="Phone Number">
+                <span id="phone-email-error" class="error-text"></span>
+                <span id="phone-error" class="error-text"></span>
+                <br />
+              </p>
+              <p>
+                <label for="email_address">Or Email</label>
+                <input type="email" id="email_address" placeholder="Email">
+                <span id="email-error" class="error-text"></span>
+                <br />
+              </p>
+
+              <p>Price Range?
+                <span>
+                  <select id="price">
+                    <!-- <option disabled selected value></option> -->
+                    <option value="" selected>Select Price</option>
+                    <option value="Buy $750K - $1.5M">$750K - $1.5M</option>
+                    <option value="Buy $1.5 - $3.0M">$1.5 - $3.0M</option>
+                    <option value="Buy $3.0 - $5.0M">$3.0 - $5.0M</option>
+                    <option value="Buy $5.0M+">$5.0M+</option>
+                  </select>
+                </span>
+              </p>
+
+              <p>When do you want to buy? <br />
+                <input type="radio" name="time" id="time" value="Buy Now" />
+                  &nbsp;&nbsp; Now!<br />
+                <input type="radio" name="time" id="time" value="Buy 1 - 3 Months" />
+                  &nbsp;&nbsp; 1 - 3 Months<br />
+                <input type="radio" name="time" id="time" value="Buy 3 - 6 Months" />
+                  &nbsp;&nbsp; 3 - 6 Months<br />
+                <input type="radio" name="time" id="time" value="Buy 6 Months +" />
+                  &nbsp;&nbsp; 6 Months +
+              </p>
+
+              <p>
+                <label for="message">Message</label>
+                <textarea name="message" id="message" placeholder="Message" cols="30" rows="10"></textarea><br />
+              </p>
+          <button type="submit">Send Message</button>
+        </form>
+    
+        <div id="mailer-message"></div>
+      </div>
+    </aside>
+    <article>
+      <h2>Getting Started</h2>
+      <p>Buying a home can be the biggest investment you will ever make. It involves many considerations that go beyond simply choosing a house you like.</p>
+      <p>More than 80% of home buyers now start their search for a home online. After getting an idea of neighborhoods and pricing, an experience real estate broker can help you determine the trends and opportunities, as well as avoiding traps. I can assist you by first getting you pre-qualified for your loan so you can seize a good opportunity when in comes up. I can then alert you to available Pacific Palisades homes or in the area you desire as soon as they come on the market.</p>
+      <p>With over 28 years experience in Pacific Palisades and the Westside, I can help you get a property that is right for you.</p>
+      <p>Call direct at: 310-403-5535 or email at: <a href="mailto:AKWRealtor@gmail.com" id="mail-to">AKWRealtor@gmail.com</a>.</p>
+    </article>
+
   </div>
+
+  <!-- <div style="background: var(--light-blue); height: 800px; border: 1px solid var(--dark-blue); padding: 0 20px;">
+    <h2>MLS Search</h2>
+  </div> -->
   
   
   <!-- <iframe id="idxFrame" style="padding:0; margin-left: -35px; margin-top: 10px; padding-top: 0px; border:0px solid transparent; background-color:transparent;" frameborder="0" scrolling="no" src="http://www.themls.com/IDXNET/Default.aspx?wid=MgMVwPGG6%2fe%2fZu%2fuu3lAM0DUCXY3xRCLvXoCbb1PA8ljA5hnj25u6%2bY2dY%2blg8ET&&inv=1" width="933px" height="900px"></iframe> -->

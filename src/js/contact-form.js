@@ -1,9 +1,4 @@
-console.log('I am contact-form in js')
-
-// Messaging
 const sendForm = (e) => {
-  ////////////////////////////////////////////////////////////////////////////////////////////////
-  console.log('%c e ', 'background: red; color: white', e)
   e.preventDefault()
   const MAILER_URL = 'https://api.westland.net/litp-mailer/'
   // Form constants
@@ -11,6 +6,14 @@ const sendForm = (e) => {
   const phone = document.getElementById('phone').value.trim()
   const email_address = document.getElementById('email_address').value.trim()
   const message = document.getElementById('message').value.trim()
+  let price = ''
+  if (document.getElementById('price') !== null) {
+    price = document.getElementById('price').value
+  }
+  let time = ''
+  if (document.querySelector('input[name="time"]:checked') !== null) {
+    time = document.querySelector('input[name="time"]:checked').value
+  }
   const now = new Date()
   // Mailgun constants
   const email = `postmaster@mg.westland.net`
@@ -20,6 +23,8 @@ const sendForm = (e) => {
     Name: ${name}
     Email: ${email_address}
     Phone: ${phone}
+    Price: ${price}
+    Time: ${time}
     Message: ${message}`
   )
   
@@ -38,7 +43,7 @@ const sendForm = (e) => {
   let isPhoneOrEmail = false
   let isPhoneValid = true
   let isEmailValid = true
-  
+
   if(name == "") {
     let message = '&nbsp; Please fill in your name'
     document.getElementById("name-error").innerHTML = message
@@ -46,7 +51,7 @@ const sendForm = (e) => {
   } else {
     isNameValid = true
   }
-  
+
   if((phone != "") || (email_address != "") ) {
     document.getElementById("phone-email-error").innerHTML = ""
     isPhoneOrEmail = true
@@ -61,7 +66,7 @@ const sendForm = (e) => {
         isPhoneValid = true
       }
     }
-  
+
     if(email_address != "") {
       regex = /^\S+@\S+\.\S+$/
       if(regex.test(email_address) === false) {
@@ -116,7 +121,7 @@ const sendForm = (e) => {
       document.getElementById("mailer-message").innerHTML = message
     })
     messageForm.reset()
-  }
-  
-  const messageForm = document.getElementById('message-form')
-  messageForm.addEventListener('submit', sendForm)
+}
+
+const messageForm = document.getElementById('message-form')
+messageForm.addEventListener('submit', sendForm)

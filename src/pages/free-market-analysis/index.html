@@ -8,13 +8,61 @@
 {% block content %}
 <main>
 
-  <h1>Market Analysis</h1>
-  <h2>How much is your Home Worth?</h2>
+  <h1>Free Market Analysis</h1>
+  <div class="aside-message">
+    <aside>
+      <h4>Sign-up for your Free Market Analysis!</h4>
+      <div class="contact-form-wrapper">
+        <form id="message-form" autocomplete="on" novalidate>
+              <p>
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Name">
+                <span id="name-error" class="error-text"></span>
+                <br />
+              </p>
+              <p>
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" placeholder="Phone Number">
+                <span id="phone-email-error" class="error-text"></span>
+                <span id="phone-error" class="error-text"></span>
+                <br />
+              </p>
+              <p>
+                <label for="email_address">Or Email</label>
+                <input type="email" id="email_address" placeholder="Email">
+                <span id="email-error" class="error-text"></span>
+                <br />
+              </p>
 
-  <p>Let me help you evaluate your Pacific Palisades home's selling potential. With over 28 years of real estate experience in Pacific Palisades and the Westside, I can help you determine your home's estimated market value. One of the best ways to determine how much your home is worth is to compare it with similar homes that have recently sold in your area, as well as current homes on the market in the Palisades.</p>
-  <p>An overpriced home can sit on the market for a longtime. An underpriced home may cost you thousands in lost profits. Before you sell a home, it is crucial that you know your home's true market value in today's ever-changing real estate market.</p>
-  <p>Knowing what your Pacific Palisades home is worth is important if you are thinking of selling your home. Using the information you submit to us in the form, we will conduct a comparative market analysis by searching the database of all homes listed or sold in your area. With this current market data, we will be able to determine a range of what your Pacific Palisades home might sell for if you decided to put it on the market.</p>
-  <p>Call direct at: 310-403-5535 or email at: <a href="mailto:AKWRealtor@gmail.com" id="mail-to">AKWRealtor@gmail.com</a>.</p>
+              <p>When do you want to sell? <br />
+                <input type="radio" name="time" id="time" value="Sell Now" />
+                  &nbsp;&nbsp; Now!<br />
+                <input type="radio" name="time" id="time" value="Sell 1 - 3 Months" />
+                  &nbsp;&nbsp; 1 - 3 Months<br />
+                <input type="radio" name="time" id="time" value="Sell 3 - 6 Months" />
+                  &nbsp;&nbsp; 3 - 6 Months<br />
+                <input type="radio" name="time" id="time" value="Sell 6 Months +" />
+                  &nbsp;&nbsp; 6 Months +
+              </p>
 
+              <p>
+                <label for="message">Message</label>
+                <textarea name="message" id="message" placeholder="Message" cols="30" rows="10"></textarea><br />
+              </p>
+          <button type="submit">Send Message</button>
+        </form>
+    
+        <div id="mailer-message"></div>
+      </div>
+    </aside>
+    <article>
+      <h2>How much is your Home Worth?</h2>
+
+      <p>Let me help you evaluate your Pacific Palisades home's selling potential. With over 28 years of real estate experience in Pacific Palisades and the Westside, I can help you determine your home's estimated market value. One of the best ways to determine how much your home is worth is to compare it with similar homes that have recently sold in your area, as well as current homes on the market in the Palisades.</p>
+      <p>An overpriced home can sit on the market for a longtime. An underpriced home may cost you thousands in lost profits. Before you sell a home, it is crucial that you know your home's true market value in today's ever-changing real estate market.</p>
+      <p>Knowing what your Pacific Palisades home is worth is important if you are thinking of selling your home. Using the information you submit to us in the form, we will conduct a comparative market analysis by searching the database of all homes listed or sold in your area. With this current market data, we will be able to determine a range of what your Pacific Palisades home might sell for if you decided to put it on the market.</p>
+      <p>Call direct at: 310-403-5535 or email at: <a href="mailto:AKWRealtor@gmail.com" id="mail-to">AKWRealtor@gmail.com</a>.</p>
+    </article>
+  </div>
 </main>
 {% endblock %}

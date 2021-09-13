@@ -129,6 +129,10 @@ video {
   background: var(--dark-blue);
   -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
           box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+  ul {
+    list-style: none;
+  }
 }
 
 .header .wrapper {
@@ -223,7 +227,7 @@ video {
   width: 100%;
   height: auto;
   margin-top: 1.75rem;
-  padding: 1rem 2rem;
+  padding: 1rem 0rem;
   border: none;
   outline: none;
   z-index: 500;
@@ -262,7 +266,7 @@ video {
 
 .header .menu > ul > li .menu-column-1 {
   min-width: 16rem;
-  max-width: 20rem;
+  max-width: 16rem;
 }
 
 .header .menu > ul > li .menu-subs.menu-mega {
@@ -411,7 +415,7 @@ video {
     outline: none;
     opacity: 1;
     border-radius: 0.25rem;
-    background: #121212;
+    background: #fff;
     -webkit-transform: rotate(0deg);
         -ms-transform: rotate(0deg);
             transform: rotate(0deg);

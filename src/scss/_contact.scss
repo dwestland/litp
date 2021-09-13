@@ -55,6 +55,7 @@
     border: 1px solid var(--dark-green);
     color: var(--dark-green);
     display: block;
+    margin-bottom: 20px;
     margin-top: 60px;
     padding: 10px;
   }
@@ -65,6 +66,7 @@
     border: 1px solid var(--dark-red);
     color: var(--dark-red);
     display: block;
+    margin-bottom: 20px;
     margin-top: 60px;
     padding: 10px;
   }
@@ -72,6 +74,36 @@
 
 .office-map {
   margin-top: 80px;
+}
+
+.aside-message {
+  display: flex;
+
+  form {
+    margin-bottom: 70px;
+  }
+
+  .form-wrapper {
+    border: 1px solid blue;
+  }
+
+  aside {
+    border-right: 1px solid lightgray;
+    padding-right: 20px;
+    margin-top: 80px;
+    width: 33%;
+  }
+
+  article {
+    padding-left: 20px;
+    width: 66%;
+  }
+
+  input[type=radio] {
+    height: 20px;
+    margin-top: 10px;
+    width: 30px;
+  }
 }
 
 /* Mobile menu */
@@ -90,6 +122,21 @@
           grid-column: 1 / 2;
         }
       }
+    }
+  }
+
+  .aside-message {
+    display: block;
+
+    aside {
+      border-right: none;
+      padding-right: 0px;
+      width: 100%;
+    }
+  
+    article {
+      padding-left: 0px;
+      width: 100%;
     }
   }
 }
